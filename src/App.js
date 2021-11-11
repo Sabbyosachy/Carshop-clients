@@ -6,17 +6,21 @@ import {
   Route
 } from "react-router-dom";
 import Home from './Pages/Home/Home/Home';
-import Header from './Pages/Home/Header/Header';
-import Explore from './Pages/Explore/Explore';
 import NotFound from './Pages/NotFound/NotFound';
 import Footer from './Pages/Home/Footer/Footer';
+import Explores from './Pages/Explores/Explores/Explores';
+import Header from './Pages/Home/Header/Header';
+import Login from './Pages/Login/Login';
+import AuthProvider from './contexts/AuthProvider';
+import Product from './Pages/Home/Product/Product';
 
 
 function App() {
   return (
     <div className="App">
-      <Router>
-        <Header></Header>
+   <AuthProvider>
+   <Router>
+     <Header></Header>
         <Switch>
         <Route exact path="/">
            <Home></Home>
@@ -25,14 +29,21 @@ function App() {
            <Home></Home>
           </Route>
           <Route exact path="/explore">
-            <Explore></Explore>
+            <Explores></Explores>
+          </Route>
+          <Route exact path="/products/:productId">
+            <Product></Product>
+          </Route>
+          <Route exact path="/login">
+           <Login></Login>
           </Route>
           <Route exact path="*">
             <NotFound></NotFound>
           </Route>
-        </Switch>
-        <Footer></Footer>
+        </Switch> 
+        <Footer></Footer> 
       </Router>
+   </AuthProvider>
     </div>
   );
 }

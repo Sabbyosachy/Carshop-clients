@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Explore.css';
-
 const Explore = () => {
     const[products,setProducts]=useState([]);
     useEffect(() => {
@@ -25,7 +24,7 @@ const Explore = () => {
                                 <p>{product.description}</p>
                                 <h6>Price: {product.price}</h6>
                                 <br />
-                                <Link to ={`services/${product.id}`}>
+                                <Link to ={`products/${product.id}`}>
                                     <button className="btn">Buy Now</button>
                                 </Link>
                             </div>
