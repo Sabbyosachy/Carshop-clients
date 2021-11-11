@@ -1,0 +1,17 @@
+.navs1{
+    text-decoration: none;
+    margin-right: 10px;
+    font-weight: 500;
+    font-size: 16px;
+    background-color:rgb(94, 94, 94);
+    color:white;
+    padding: 7px 15px;
+}
+.navs1:hover{
+    color:white;
+}
+.text-head{
+    color: rgb(94, 94, 94);
+    font-size: 22px;
+    font-weight: 800;
+}

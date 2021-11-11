@@ -1,0 +1,51 @@
+.headline{
+    margin-top: 90px;
+    font-weight: 700;
+    font-size: 40px;
+    color: orange;
+    text-align: left;
+}
+.des{
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+.texa{
+    text-align: left;
+}
+.btn{
+   background-color:  rgb(94, 94, 94);
+   color: white;
+   padding: 7px 35px;
+   font-size: 16px;
+   font-weight: 700;
+}
+
+@media (max-width: 480px) {
+
+    .headline{
+        font-weight: 500;
+        font-size: 20px;
+        color: orange;
+        text-align: center;
+    }
+    .texa{
+        font-size: 12px;
+        text-align: center;
+    }
+    .des{
+        text-align: center;
+        margin-top: 10px;
+        margin-bottom: 30px;
+        font-size: 12px;
+        padding: 0px 70px;
+    }
+    .btn{
+        margin-left: 20px;
+    }
+   .image{
+       width: 350px;
+       height: 300px;
+   }
+
+}
