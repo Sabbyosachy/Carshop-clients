@@ -1,0 +1,98 @@
+[
+    {
+      "id":"1",
+      "name": "Ferrari LaFerrari Aperta",
+      "price": "$2.2 million",
+      "description": "The LaFerrari (famed for being a member of the hybrid hypercar Holy Trinity) is spectacular in itself. Taking it a step further is Aperta version, most special clients.",
+      "img": "https://i.ibb.co/x5m7qtL/img1.jpg"
+    },
+    {
+      "id": "2",
+      "name": "Aston Martin Vulcan",
+      
+      "price": "$2.3 million",
+      "description": "This track-only Aston Martin is the culmination of century of racing pedigree and engineering ability,and it’s no secret that that culmination is truly amazing with a unique.",
+      "img": "https://i.ibb.co/g40D5nt/img2.jpg"
+    },
+    {
+      "id": "3",
+      "name": "Mercedes-AMG One",
+   
+      "price": "$2.5 million",
+      "description": "The AMG One is named so because it puts Formula One performance into a car for the street. The engine itself is completely derived from a Mercedes F1 car produce 748 horsepower",
+      "img": "https://i.ibb.co/7rN7PMq/img3.jpg"
+    },
+    {
+      "id": "4",
+      "name": "Lamborghini Countach",
+     
+      "price": "$2.5 million",
+      "description": "The 2022 Lamborghini Countach was unveiled in August 2021 as a limited-production hybrid that would carry a price of $2.5 million its modern interpretation of the classic supercar.",
+      "img": "https://i.ibb.co/G29nFMH/img4.jpg"
+    },
+    {
+      "id": "5",
+      "name": " Ferrari America",
+   
+      "price": "$2.6 million",
+      "description": "The F12berlinetta-based F60 America was a Ferrari built to celebrate the 60th anniversary of Ferrari’s U.S. operations, and being released on 10/10/14 with only 10 examples produced.",
+      "img": "https://i.ibb.co/KLZn5kx/img5.jpg"
+    },
+    {
+      "id": "6",
+      "name": "Aston Valkyrie",
+      "price": "$2.6 million",
+     
+      "description": "Like Mercedes-AMG did with the One, Aston Martin poured all their Formula One knowledge, experience, and engineering talent into the Valkyrie, and what resulted is a car that is truly.",
+      "img": "https://i.ibb.co/QfQjK78/img6.jpg"
+    },
+    {
+      "id": "7",
+      "name": "Koenigsegg Jesko",
+      "price": "$2.8 million",
+     
+      "description": "Anyone who has the privilege of opening the “dihedral synchro-helix” doors of a Koenigsegg knows that something incredibly powerful(and incredibly costly)lies inside with 1,603 horsepower.",
+      "img": "https://i.ibb.co/8bQD6K7/img7.jpg"
+    },
+    {
+      "id": "8",
+      "name": "Ferrari Pininfarina",
+      "price": "$3 million",
+     
+      "description": "A tribute to design house Pininfarina’s late former chairman, Sergio Pininfarina, this 458-based Barchetta is a beautiful tribute to the spirits of both Ferrari and Pininfarina 90s alike.",
+      "img": "https://i.ibb.co/kDwJ83h/img8.jpg"
+    },
+    {
+      "id": "9",
+      "name": "W Motors Lykan",
+      "price": "$3.4 million",
+     
+      "description": "his car became quite notorious when it was seen skyscraper-hopping in Fast and Furious 7, but the Lykan Hypersport is a notorious car in itself. Having doors that are somehow both suicide.",
+      "img": "https://i.ibb.co/Q8wccrh/img9.jpg"
+    },
+    {
+      "id": "10",
+      "name": "BC Roadster",
+      "price": "$3.5 million",
+     
+      "description": "It is meant to be the last Pagani Huayra, and that’s no surprise because it’s a car fit for a grand finale. Only 40 examples exist, and they are as gorgeous as they are powerful and stylish.",
+      "img": "https://i.ibb.co/RPv60wj/img10.jpg"
+    },
+    {
+      "id": "11",
+      "name": "Lamborghini Sian",
+      "price": "$3.6 million",
+     
+      "description": "The Sian is Lamborghini’s most bold and innovative effort yet, with a hybrid system that uses lithium-ion supercapacitors to its advantage, making for a hybrid that  weight for immense power.",
+      "img": "https://i.ibb.co/ZJySjX4/img11.jpg"
+    },
+    {
+      "id": "12",
+      "name": "Bugatti Chiron",
+      "price": "$3.7 million",
+     
+      "description": "It’s human nature to try to improve, to test the limits of whatever is in front of you. But for the past 15 or so years, nobody has done that quite like Bugatti the Veyron capable of 253 mph.",
+      "img": "https://i.ibb.co/z5q9fHH/img12.jpg"
+    }
+  ]
+  
