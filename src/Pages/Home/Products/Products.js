@@ -1,14 +1,21 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import useAuth from '../../../hooks/useAuth';
 import './Products.css';
 
 const Products = () => {
     const[products,setProducts]=useState([]);
+    const{isLoading}=useAuth();
     useEffect(() => {
-        fetch('./fake.json')
+        fetch('http://localhost:5000/products')
             .then(response => response.json())
             .then(data => setProducts(data));
     }, [])
+
+    if(isLoading){
+        return <h4 className="text-danger text-center py-5 pt-5 mt-5">Loading.........</h4>;
+     
+    }
     return (
         <div className="py-5">
              <h3 className="fw-bold">All Products</h3>
@@ -16,7 +23,7 @@ const Products = () => {
             <div className="show__item">
                 {
                     products.slice(0,6).map(product=>
-                        <div className="service" key={product.id}>
+                        <div className="service" key={product._id}>
                             <div>
                             <img src={product.img} alt="" />
                             </div>
@@ -25,7 +32,7 @@ const Products = () => {
                                 <p>{product.description}</p>
                                 <h6>Price: {product.price}</h6>
                                 <br />
-                                <Link to ={`products/${product.id}`}>
+                                <Link to ={`products/${product._id}`}>
                                     <button className="btn">Buy Now</button>
                                 </Link>
                             </div>

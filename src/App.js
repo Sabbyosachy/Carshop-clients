@@ -13,6 +13,8 @@ import Header from './Pages/Home/Header/Header';
 import Login from './Pages/Login/Login';
 import AuthProvider from './contexts/AuthProvider';
 import Product from './Pages/Home/Product/Product';
+import AddProduct from './Pages/AddProduct/AddProduct';
+import PrivateRoute from './Pages/Shared/PrivateRoute/PrivateRoute';
 
 
 function App() {
@@ -31,11 +33,14 @@ function App() {
           <Route exact path="/explore">
             <Explores></Explores>
           </Route>
-          <Route exact path="/products/:productId">
+          <PrivateRoute exact path="/products/:productId">
             <Product></Product>
-          </Route>
+          </PrivateRoute>
           <Route exact path="/login">
            <Login></Login>
+          </Route>
+          <Route exact path="/addproduct">
+            <AddProduct></AddProduct>
           </Route>
           <Route exact path="*">
             <NotFound></NotFound>

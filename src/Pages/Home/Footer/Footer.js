@@ -9,7 +9,7 @@ const Footer = () => {
             <div className="row">
               <div className="col-md-5 col-12">
                 <div className="first">
-                  <h1 className="head"><i class="fas fa-car"></i> Zee cars</h1>
+                  <h1 className="head"><i className="fas fa-car"></i> Zee cars</h1>
                   <div className="icons-container d-flex">
                     <div className="icon">
                     <i className="fab fa-facebook"></i>

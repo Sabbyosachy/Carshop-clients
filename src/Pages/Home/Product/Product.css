@@ -41,3 +41,18 @@
     border: none;
     padding: 7px;
 }
+.card{
+  margin-left: 360px;
+}
+
+@media only screen and (max-width:688px) {
+  
+      .card{
+        margin-left: 0px;
+      }
+}
+@media only screen and (min-width:689px) and (max-width: 991px){
+ .card{
+  margin-left: 0px;
+ }
+}

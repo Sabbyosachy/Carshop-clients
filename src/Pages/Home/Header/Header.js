@@ -16,6 +16,7 @@ const Header = () => {
       <Nav className="ms-auto">
         <NavLink className="navs1" to="/home"> Home</NavLink>
         <NavLink className="navs1" to="/explore"> Explore</NavLink>
+        <NavLink className="navs1" to="/addproduct">Add Product</NavLink>
         {
           user?.email ?
           <NavLink onClick={logOut} to="/home" className="navs1">Logout</NavLink>:

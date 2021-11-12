@@ -13,7 +13,7 @@ const Banner = () => {
                  
                 </div>
                 <div className="col-md-6 col-12">
-                  <img className="image" src="https://i.ibb.co/rtnfgmK/Car-Wash-Service-Worker-Wearing-Uniform-Wiping-Out-Automobile-with-Sponge-Cleaning-Company-Employee.jpg" alt="" srcset="" />
+                  <img className="image" src="https://i.ibb.co/rtnfgmK/Car-Wash-Service-Worker-Wearing-Uniform-Wiping-Out-Automobile-with-Sponge-Cleaning-Company-Employee.jpg" alt="" srcSet="" />
                 </div>
                 
             </div>
