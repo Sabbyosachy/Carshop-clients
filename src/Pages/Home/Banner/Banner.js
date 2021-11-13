@@ -3,7 +3,7 @@ import './Banner.css';
 
 const Banner = () => {
     return (
-        <div className="container py-3">
+        <div className="container py-5">
             <div className="row">
             <div className="col-md-6 col-12 me-auto">
                   <h4 className="headline mb-1">Welcome To Zee cars <br />Company</h4>

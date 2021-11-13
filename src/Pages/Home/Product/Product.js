@@ -39,7 +39,7 @@ const Product = () => {
                         <Card.Title>{product.name}</Card.Title>
                         <Card.Text>
                         {product.description}
-                        <h5>{product.price}</h5>
+                        <h6>Price: {product.price}</h6>
                         </Card.Text>
                     </Card.Body>
                     </Card>
@@ -47,11 +47,11 @@ const Product = () => {
             <div className=" addproduct">
       <h2 className="fw-bold text-warning mt-5 world pb-3" >Please Fillup The Form</h2>
       <form onSubmit={handleSubmit(onSubmit)}>
-      <input type="text" {...register("username")} value={user?.displayName} required />     
+      <input type="text" {...register("username")} placeholder="User Name" value={user?.displayName} required />     
       <input type="text" {...register("address")} placeholder="Address" required />    
-      <input type="text" {...register("name")} value={product?.name} required />    
+      <input type="text" {...register("name")} placeholder="Product Name" required />    
       <input type="email" {...register("email")} value={user?.email}  required/>     
-      <input type="text" {...register("price")} value={product?.price} required />   
+      <input type="text" {...register("price")} placeholder="price" required />   
       <input type="number" {...register("phone")} placeholder="Phone Number" required />        
       <input className="btn1" type="submit"  /> 
     </form>

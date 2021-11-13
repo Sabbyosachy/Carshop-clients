@@ -1,0 +1,23 @@
+[
+    {
+      "id":"1",
+      "name": "R Mitchell",
+      "rating": "5",
+      "description": "Exactly what we wanted. Simple ordering and fast delivery.",
+      "img": "https://i.ibb.co/kK9xqsK/5399488.png"
+    },
+    {
+      "id": "2",
+      "name": "Anne Groogan",
+      "rating": "5",
+      "description": "The customer service extremely excellent delivery even better.",
+      "img": "https://i.ibb.co/CtgL0yB/Accenture-Julie-Sweet-400x400.jpg"
+    },
+    {
+      "id": "3",
+      "name": "Teresa Johnston",
+      "rating": "5",
+      "description": "Excellent product really good.Great service are of high quality.",
+      "img": "https://i.ibb.co/rcm422s/Adam.jpg"
+    }
+]

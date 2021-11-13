@@ -4,7 +4,7 @@ import { useHistory, useLocation } from 'react-router';
 import useAuth from '../../hooks/useAuth';
 
 const Login = () => {
-    const{handleSubmit, isLogin,setIsLoading, handleEmailChange, handlePasswordChange, handleNameChange, checkedIsLogin, signInUsingGoogle, handleResetPass, error, setUser}=useAuth();
+    const{handleSubmit,saveUser,isLogin,setIsLoading, handleEmailChange, handlePasswordChange, handleNameChange, checkedIsLogin, signInUsingGoogle, handleResetPass, error, setUser}=useAuth();
     const location = useLocation();
     const history = useHistory();
     // handle redirecting using google login
@@ -14,14 +14,23 @@ const Login = () => {
         .then((result) => {
             const user = result.user;
             setUser(user);
+            saveUser(user.email,user.displayName,'PUT');
             history.push(location.state?.from || '/home');
           })
           .finally(()=>setIsLoading(false));
     }
     return (
-        <div className="login py-5 mt-5">
+        <div className="row container">
+            <div className="col-md-8">
+                <div className="py-5">
+                <img className="w-100" src="https://i.ibb.co/yWJvNXp/EIChxr-WX4-AEzq-Ai.jpg" alt="" srcset="" />
+                </div>
+              
+            </div>
+            <div className="col-md-4">
+            <div className="login py-5 my-5">
         <form onSubmit={handleSubmit}>
-            <h1 className="font-bold text-2xl text-center text-red-400">Please {isLogin ? "Login" : "Register"}</h1>
+            <h2 className="font-bold text-center text-red-400">Please {isLogin ? "Login" : "Register"}</h2>
             {
                 !isLogin && <input onChange={handleNameChange} type="text" placeholder="Your Name" />
             }
@@ -40,6 +49,8 @@ const Login = () => {
         </form>
         <button onClick={handleGoogleSignIn} className="btn__login">Google Sign In</button>
     </div>
+            </div>
+        </div>
     );
 };
 

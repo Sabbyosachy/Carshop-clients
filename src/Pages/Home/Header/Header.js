@@ -8,7 +8,7 @@ const Header = () => {
   const {user,logOut}=useAuth();
     return (
         <div>
- <Navbar bg="light" expand="lg">
+ <Navbar fixed="top" bg="light" expand="lg">
   <Container>
     <Navbar.Brand href="#home"><span className="text-head">Zee <span className="text-danger">cars</span></span></Navbar.Brand>
     <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -16,7 +16,11 @@ const Header = () => {
       <Nav className="ms-auto">
         <NavLink className="navs1" to="/home"> Home</NavLink>
         <NavLink className="navs1" to="/explore"> Explore</NavLink>
-        <NavLink className="navs1" to="/addproduct">Add Product</NavLink>
+        <NavLink className="navs1" to="/mnallorder">ManageAllOrders</NavLink>
+        <NavLink className="navs1" to="/myorder">My Order</NavLink>
+        <NavLink className="navs1" to="/addproduct">AddProduct</NavLink>
+        <NavLink className="navs1" to="/review">Review</NavLink>
+        <NavLink className="navs1" to="/makeadmin">Make Admin</NavLink>
         {
           user?.email ?
           <NavLink onClick={logOut} to="/home" className="navs1">Logout</NavLink>:
