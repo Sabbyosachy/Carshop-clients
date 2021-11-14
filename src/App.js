@@ -18,6 +18,8 @@ import Myorder from './Pages/Myorder/Myorder';
 import ManageAllOrder from './Pages/ManageAllOrder/ManageAllOrder';
 import Review from './Pages/Review/Review';
 import MakeAdmin from './Pages/MakeAdmin/MakeAdmin';
+import Pay from './Pages/Pay/Pay';
+import ManageProduct from './Pages/ManageProduct/ManageProduct';
 
 
 function App() {
@@ -58,6 +60,12 @@ function App() {
           </Route>
           <Route path="/makeadmin">
             <MakeAdmin></MakeAdmin>
+          </Route>
+          <Route path="/pay">
+            <Pay></Pay>
+          </Route>
+          <Route path="/manageproduct">
+            <ManageProduct></ManageProduct>
           </Route>
           <Route exact path="*">
             <NotFound></NotFound>

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 
 const MakeAdmin = () => {
     const[email,setEmail]=useState('');
+    const[success,setSuccess]=useState(false);
     const handleOnBlur=e=>{
         setEmail(e.target.value);
     }
@@ -16,7 +17,10 @@ const MakeAdmin = () => {
         })
         .then(res=>res.json())
         .then(data=>{
-            console.log(data);
+            if(data.modifiedCount){
+                console.log(data);
+                setSuccess(true);
+            }
         })
 
 
@@ -33,6 +37,9 @@ const MakeAdmin = () => {
 
 
             </form>
+            {success && 
+           <h6 className="text-primary mt-5 fw-bold">Congress You Are Admin Now!</h6> 
+             }
 
         </div>
     );

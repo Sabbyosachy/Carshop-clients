@@ -11,7 +11,7 @@ const ManageAllOrder = () => {
     },[])
    
     const handleDelete = (id) => {
-        const sure = window.confirm("Do you want to delete this plan? ");
+        const sure = window.confirm("Do you want to delete order? ");
         if (sure) {
           fetch(`http://localhost:5000/delorders/${id}`, {
             method: "DELETE",

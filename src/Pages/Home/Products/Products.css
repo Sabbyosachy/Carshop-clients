@@ -9,10 +9,16 @@
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.336);
     padding: 20px;
   }
+
   .service img {
     height: 100%;
     width: 100%;
     padding: 15px;
+    transform: scale(1);
+    transition:0.7s;
+  }
+  .service img:hover{
+    transform: scale(1.1);
   }
   
 /* Make it responsive */
