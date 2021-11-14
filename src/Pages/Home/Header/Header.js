@@ -16,18 +16,12 @@ const Header = () => {
       <Nav className="ms-auto">
         <NavLink className="navs1" to="/home"> Home</NavLink>
         <NavLink className="navs1" to="/explore"> Explore</NavLink>
-        {/* <NavLink className="navs1" to="/manageproduct">Manage Product</NavLink> */}
-        {/* <NavLink className="navs1" to="/pay">Pay</NavLink> */}
-        {/* <NavLink className="navs1" to="/mnallorder">ManageAllOrders</NavLink>
-        <NavLink className="navs1" to="/myorder">My Order</NavLink> */}
-        {/* <NavLink className="navs1" to="/addproduct">AddProduct</NavLink> */}
-        {/* <NavLink className="navs1" to="/review">Review</NavLink>
-        <NavLink className="navs1" to="/makeadmin">Make Admin</NavLink> */}
+        
+
         {
           user?.email ?
-          <NavLink onClick={logOut} to="/home" className="navs1">Logout</NavLink>:
-          
-          <NavLink className="navs1" to="/login">Login</NavLink>
+          <NavLink className="navs1" to="/dashbord">Dashboard</NavLink>:
+           <NavLink className="navs1" to="/login">Login</NavLink>
           
           }
           <h6 className="mt-2"><span className="text-danger p-3">{user?.displayName}</span></h6>       

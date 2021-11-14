@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { createUserWithEmailAndPassword, getAuth, GoogleAuthProvider, onAuthStateChanged, sendEmailVerification, sendPasswordResetEmail, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile  } from "firebase/auth";
 import initializeAuthentication from '../Pages/Shared/Firebase/firebase.init';
+import { useHistory, useLocation } from 'react-router';
 
 initializeAuthentication();
 const useFirebase = () => {
@@ -14,6 +15,7 @@ const useFirebase = () => {
     const [name, setName] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
+    const [admin,setAdmin]=useState(false);
     
     const signInUsingGoogle = () => {
         return signInWithPopup(auth, googleProvider);
@@ -103,6 +105,13 @@ const useFirebase = () => {
         console.log(result);
       })
     }
+
+    useEffect(()=>{
+        fetch(`http://localhost:5000/users/${user.email}`)
+        .then(res=>res.json())
+        .then(data=>setAdmin(data.Admin));
+    },[user.email])
+
 // logout 
     const logOut = () =>{
         setIsLoading(true);
@@ -131,6 +140,7 @@ const useFirebase = () => {
     return {
         signInUsingGoogle,
         logOut,
+        admin,
         checkedIsLogin,
         handleSubmit,
         handleNameChange,

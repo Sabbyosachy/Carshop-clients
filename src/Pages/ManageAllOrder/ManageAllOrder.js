@@ -31,7 +31,7 @@ const ManageAllOrder = () => {
       };
 
     return (
-        <div className="py-5">
+        <div>
             <h3 className="fw-bold">Manage All Order</h3>
             <span className="fw-bold text-danger mb-4">See All Orders</span>
             <div>

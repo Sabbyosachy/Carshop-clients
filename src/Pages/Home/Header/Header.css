@@ -7,10 +7,12 @@
     padding: 5px 12px;
     border: 2px solid rgb(94, 94, 94) ;
     transition: 0.7s;
+    transform: scale(1);
 }
 .navs1:hover{
     color:white;
     background-color:rgb(94, 94, 94) ;
+    transform: scale(1.1);
 }
 .text-head{
     color: rgb(94, 94, 94);

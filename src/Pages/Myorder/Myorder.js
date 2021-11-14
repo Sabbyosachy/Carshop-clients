@@ -32,8 +32,8 @@ const MyOrder = () => {
 
 
     return (
-        <div className="py-5">
-            <h3 className="fw-bold mt-5">My Order</h3>
+        <div>
+            <h3 className="fw-bold">My Order</h3>
             <span className="fw-bold text-danger mb-4">Selected Product You Want To Buy</span>
             <div>
                {
