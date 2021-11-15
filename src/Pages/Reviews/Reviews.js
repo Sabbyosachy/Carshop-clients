@@ -10,7 +10,7 @@ const Reviews = () => {
     //Fech all reviews and show in home
 
     useEffect(()=>{
-        fetch('http://localhost:5000/reviews')
+        fetch('https://shielded-sea-86684.herokuapp.com/reviews')
         .then(res=>res.json())
         .then(data=>setReview(data));
     },[]);

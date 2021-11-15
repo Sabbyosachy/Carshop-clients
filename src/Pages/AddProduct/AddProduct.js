@@ -12,7 +12,7 @@ const AddProduct = () => {
     
     const onSubmit = data =>{
       console.log(data);
-      axios.post('http://localhost:5000/products',data)
+      axios.post('https://shielded-sea-86684.herokuapp.com/products',data)
       .then(res=>{
         if(res.data.insertedId){
           alert('New Product Added');

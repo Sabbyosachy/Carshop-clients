@@ -11,7 +11,7 @@ const ManageProduct = () => {
     //Fetch products from database
     
     useEffect(() => {
-        fetch('http://localhost:5000/products')
+        fetch('https://shielded-sea-86684.herokuapp.com/products')
             .then(response => response.json())
             .then(data => setProducts(data));
     }, []);
@@ -28,7 +28,7 @@ const ManageProduct = () => {
     const handleDelete = (id) => {
         const sure = window.confirm("Do you want to delete this product? ");
         if (sure) {
-          fetch(`http://localhost:5000/delproducts/${id}`, {
+          fetch(`https://shielded-sea-86684.herokuapp.com/delproducts/${id}`, {
             method: "DELETE",
             headers: {
               "content-type": "application/json",

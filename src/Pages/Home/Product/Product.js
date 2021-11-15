@@ -18,7 +18,7 @@ const Product = () => {
 
     const onSubmit= data =>{
         console.log(data);
-        axios.post('http://localhost:5000/orders',data)
+        axios.post('https://shielded-sea-86684.herokuapp.com/orders',data)
         .then(res=>{
             if(res.data.insertedId){
                 alert('Thankyou For Purchasing')
@@ -29,7 +29,7 @@ const Product = () => {
 
      
     useEffect(() => {
-             fetch(`http://localhost:5000/products/${productId}`)
+             fetch(`https://shielded-sea-86684.herokuapp.com/products/${productId}`)
             .then(res => res.json())
             .then(data => setProduct(data));
     }, [])

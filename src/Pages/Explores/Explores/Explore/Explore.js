@@ -11,7 +11,7 @@ const Explore = () => {
     const[products,setProducts]=useState([]);
     const{isLoading}=useAuth();
     useEffect(() => {
-        fetch('http://localhost:5000/products')
+        fetch('https://shielded-sea-86684.herokuapp.com/products')
             .then(response => response.json())
             .then(data => setProducts(data));
     }, []);

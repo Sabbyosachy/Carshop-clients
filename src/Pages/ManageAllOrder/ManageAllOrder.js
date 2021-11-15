@@ -10,7 +10,7 @@ const ManageAllOrder = () => {
     //fetch orders from database
     
     useEffect(()=>{
-        fetch('http://localhost:5000/orders')
+        fetch('https://shielded-sea-86684.herokuapp.com/orders')
         .then(res=>res.json())
         .then(data=>setOrder(data));
     },[])
@@ -20,7 +20,7 @@ const ManageAllOrder = () => {
     const handleDelete = (id) => {
         const sure = window.confirm("Do you want to delete order? ");
         if (sure) {
-          fetch(`http://localhost:5000/delorders/${id}`, {
+          fetch(`https://shielded-sea-86684.herokuapp.com/delorders/${id}`, {
             method: "DELETE",
             headers: {
               "content-type": "application/json",

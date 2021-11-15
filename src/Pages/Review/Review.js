@@ -9,7 +9,7 @@ const Review = () => {
     //post reviwes to database
     const onSubmit=data=>{
        console.log(data); 
-       axios.post('http://localhost:5000/reviews',data)
+       axios.post('https://shielded-sea-86684.herokuapp.com/reviews',data)
        .then(res=>{
            if(res.data.insertedId){
                alert("Your Opinion Are Added")

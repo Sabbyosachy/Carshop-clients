@@ -17,7 +17,7 @@ const Products = () => {
 // Fetch data from database 
 
     useEffect(() => {
-        fetch('http://localhost:5000/products')
+        fetch('https://shielded-sea-86684.herokuapp.com/products')
             .then(response => response.json())
             .then(data => setProducts(data));
     }, [])
