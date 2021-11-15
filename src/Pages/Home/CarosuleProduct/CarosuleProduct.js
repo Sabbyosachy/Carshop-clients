@@ -8,6 +8,8 @@ const CarosuleProduct = () => {
   useEffect(()=>{
     Aos.init({duration:3000});
 },[]);
+
+//Carosule slider banner set with cars information
     return (
         <div className="pt-5">
            <div data-aos="fade-down">

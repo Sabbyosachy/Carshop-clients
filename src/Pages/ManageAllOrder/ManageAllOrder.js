@@ -6,12 +6,17 @@ import "aos/dist/aos.css";
 const ManageAllOrder = () => {
     const[order,setOrder]=useState([]);
     const[orders,setOrders]=useState([]);
+    
+    //fetch orders from database
+    
     useEffect(()=>{
         fetch('http://localhost:5000/orders')
         .then(res=>res.json())
         .then(data=>setOrder(data));
     },[])
    
+    //Delete handle orrder 
+
     const handleDelete = (id) => {
         const sure = window.confirm("Do you want to delete order? ");
         if (sure) {
@@ -36,6 +41,8 @@ const ManageAllOrder = () => {
         Aos.init({duration:2000});
     },[]);
 
+    //user information
+    
     return (
         <div data-aos="fade-left">
             <h3 className="fw-bold">Manage All Order</h3>

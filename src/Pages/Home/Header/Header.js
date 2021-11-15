@@ -6,13 +6,18 @@ import useAuth from '../../../hooks/useAuth';
 
 const Header = () => {
   const {user}=useAuth();
+  
+  //Header set company name and brand logo
     return (
         <div>
  <Navbar fixed="top" bg="light" expand="lg">
   <Container>
-    <Navbar.Brand href="#home"><span className="text-head">Zee <span className="text-danger">cars</span></span></Navbar.Brand>
+    <Navbar.Brand href="#home"><i class="fas fa-car"></i><span className="text-head">Zee <span className="text-danger">cars</span></span></Navbar.Brand>
     <Navbar.Toggle aria-controls="basic-navbar-nav" />
     <Navbar.Collapse id="basic-navbar-nav">
+      
+      {/* Navlink set  */}
+      
       <Nav className="ms-auto">
         <NavLink className="navs1" to="/home"> Home</NavLink>
         <NavLink className="navs1" to="/explore"> Explore</NavLink>

@@ -6,12 +6,16 @@ import { useParams } from 'react-router';
 import useAuth from '../../../hooks/useAuth';
 import './Product.css';
 
+//selected product show and go into place order page
+
 const Product = () => {
     const { user } = useAuth();
     const {productId} = useParams();
     const [product, setProduct] = useState([]);
     const { register, handleSubmit,reset} = useForm();
-    
+
+    // data load from database 
+
     const onSubmit= data =>{
         console.log(data);
         axios.post('http://localhost:5000/orders',data)
@@ -29,6 +33,8 @@ const Product = () => {
             .then(res => res.json())
             .then(data => setProduct(data));
     }, [])
+
+    //products show and from fillup
 
     return (
         <div className="product__container text-center py-5 mt-5">

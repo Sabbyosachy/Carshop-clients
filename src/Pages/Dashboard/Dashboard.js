@@ -25,14 +25,23 @@ const Dashboard = () => {
             
         
          <div>
+           
+           {/* Dashboard Link add  */}
+
              <div className="row">
                  <div className="col-md-3 bord col-12">
                  <div className="backbg">
+                   {
+                     admin && <h6 className="mrg1 fw-bold mb-3">Admin Dashboard</h6>
+                   }
+                   {
+                     !admin && <h6 className="mrg1 fw-bold mb-3 ">User Dashboard</h6>
+                   }
         
                   <h6 className="mrg"><i class="fas fa-home"></i><Link className="navsdash" to="/home">Home</Link></h6>
                  {
                    admin &&  <div>
-                         <h6 className="mrg"><i class="fas fa-user-shield"></i> <Link className="navsdash" to={`${url}/makeadmin`}>Make Admin</Link></h6>
+                <h6 className="mrg"><i class="fas fa-user-shield"></i> <Link className="navsdash" to={`${url}/makeadmin`}>Make Admin</Link></h6>
             
                 <h6 className="mrg"><i class="fas fa-shopping-basket"></i> <Link className="navsdash" to={`${url}/addproduct`}>Add Product</Link></h6>
        
@@ -41,16 +50,15 @@ const Dashboard = () => {
                  <h6 className="mrg"><i class="fas fa-car"></i> <Link className="navsdash" to={`${url}/manageproduct`}>Manage Product</Link></h6>
                      </div>
                  }
-                 {
-                     !admin && <div>
-                         <h6 className="mrg"><i class="fas fa-shopping-basket"></i> <Link className="navsdash" to={`${url}/myorder`}>My Order</Link></h6>
+                 
+                <h6 className="mrg"><i class="fas fa-shopping-basket"></i> <Link className="navsdash" to={`${url}/myorder`}>My Order</Link></h6>
      
                 <h6 className="mrg"><i class="fas fa-dollar-sign"></i> <Link className="navsdash" to={`${url}/pay`}>Payment</Link></h6>
 
                  <h6 className="mrg"><i class="fas fa-user"></i> <Link className="navsdash" to={`${url}/review`}>Review</Link></h6>
                
-                     </div>
-                 }
+                   
+                 
                  {
                    user?.email ?
                    <h6 className="mrg"><i class="fas fa-sign-out-alt"></i> <Link onClick={logOut} to="/home" className="navsdash">Logout</Link></h6> :''  
@@ -58,6 +66,9 @@ const Dashboard = () => {
                  </div>
                  </div>
                  <div className="col-md-9 col-12 pt-5">
+
+            {/* Admin And User Route set  */}
+
                  <Switch>
         <Route path="/home">
           <Home></Home>

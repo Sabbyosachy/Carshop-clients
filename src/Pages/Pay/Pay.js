@@ -9,6 +9,7 @@ const Pay = () => {
     useEffect(()=>{
         Aos.init({duration:2000});
     },[]);
+    //payment from 
     return (
         <div data-aos="fade-left" className="addproduct">
              <h3 className="fw-bold text-warning">Pay For Product</h3>

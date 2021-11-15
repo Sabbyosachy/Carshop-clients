@@ -8,6 +8,7 @@ const MakeAdmin = () => {
     const handleOnBlur=e=>{
         setEmail(e.target.value);
     }
+    //put user admin in database
     const handleOnSubmit=e=>{
         const user={email};
         fetch('http://localhost:5000/users/admin',{
@@ -31,6 +32,7 @@ const MakeAdmin = () => {
     useEffect(()=>{
         Aos.init({duration:2000});
     },[]);
+    //Admin create 
     return (
         <div>
               <div data-aos="fade-left">

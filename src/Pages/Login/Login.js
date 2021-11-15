@@ -5,6 +5,8 @@ import "aos/dist/aos.css";
 import { useHistory, useLocation } from 'react-router';
 import useAuth from '../../hooks/useAuth';
 
+//Login system
+
 const Login = () => {
     const{handleSubmit,saveUser,isLogin,setIsLoading, handleEmailChange, handlePasswordChange, handleNameChange, checkedIsLogin, signInUsingGoogle, handleResetPass, error, setUser}=useAuth();
     const location = useLocation();
@@ -24,6 +26,9 @@ const Login = () => {
     useEffect(()=>{
         Aos.init({duration:2000});
     },[]);
+    
+    //login or register and  googlesignin set
+    
     return (
         <div className="row container">
             <div data-aos="fade-right" className="col-md-8">

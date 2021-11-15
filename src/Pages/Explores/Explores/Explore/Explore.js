@@ -5,6 +5,9 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import './Explore.css';
 const Explore = () => {
+    
+    // Product fetch from database 
+
     const[products,setProducts]=useState([]);
     const{isLoading}=useAuth();
     useEffect(() => {
@@ -12,6 +15,9 @@ const Explore = () => {
             .then(response => response.json())
             .then(data => setProducts(data));
     }, []);
+    
+    //Aos animation duration set
+
     useEffect(()=>{
         Aos.init({duration:2000});
     },[]);
@@ -20,6 +26,7 @@ const Explore = () => {
         return <h4 className="text-danger text-center py-5 pt-5 mt-5">Loading.........</h4>;
      
     }
+    //Show the product from database
     return (
         <div className="py-5 mt-5">
             <div data-aos="fade-down">
@@ -39,7 +46,7 @@ const Explore = () => {
                                 <h6>Price: {product.price}</h6>
                                 <br />
                                 <Link to ={`products/${product._id}`}>
-                                    <button className="btn">Buy Now</button>
+                                    <button data-aos="fade-left" className="btn">Buy Now</button>
                                 </Link>
                             </div>
                         </div>

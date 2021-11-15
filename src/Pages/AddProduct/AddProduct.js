@@ -8,6 +8,8 @@ import './AddProduct.css';
 const AddProduct = () => {
     const { register, handleSubmit,reset} = useForm();
     
+    //  Data fetch from databae 
+    
     const onSubmit = data =>{
       console.log(data);
       axios.post('http://localhost:5000/products',data)
@@ -18,11 +20,13 @@ const AddProduct = () => {
       }
       })
     }
+  //  Animation duration set 
 
     useEffect(()=>{
       Aos.init({duration:2000});
   },[]);
-
+ 
+  //From create for product
     return (
         <div data-aos="fade-left" className="addproduct">
             <h3 className=" fw-bold text-warning">Add New Product</h3>

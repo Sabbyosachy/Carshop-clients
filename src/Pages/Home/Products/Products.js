@@ -8,10 +8,13 @@ import './Products.css';
 const Products = () => {
     const[products,setProducts]=useState([]);
     const{isLoading}=useAuth();
-    
+ 
+    //Aos duration set
+
     useEffect(()=>{
         Aos.init({duration:2000});
     },[]);
+// Fetch data from database 
 
     useEffect(() => {
         fetch('http://localhost:5000/products')
@@ -23,6 +26,8 @@ const Products = () => {
         return <h4 className="text-danger text-center py-5 pt-5 mt-5">Loading.........</h4>;
      
     }
+    //Information display by grid
+    
     return (
         <div className="py-5">
              <div data-aos="fade-down">
@@ -42,7 +47,7 @@ const Products = () => {
                                 <h6>Price: {product.price}</h6>
                                 <br />
                                 <Link to ={`products/${product._id}`}>
-                                    <button className="btn">Buy Now</button>
+                                    <button data-aos="fade-left" className="btn">Buy Now</button>
                                 </Link>
                             </div>
                         </div>

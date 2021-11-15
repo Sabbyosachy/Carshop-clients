@@ -6,6 +6,9 @@ const MyOrder = () => {
     const[order,setOrder]=useState([]);
     const[orders,setOrders]=useState([]);
     const{user}=useAuth();
+
+    // fetch order from database 
+
     useEffect(()=>{
         fetch('http://localhost:5000/orders')
         .then(res=>res.json())
@@ -14,6 +17,8 @@ const MyOrder = () => {
     useEffect(()=>{
       Aos.init({duration:2000});
   },[]);
+
+  //Order delete 
 
     const handleDelete = (id) => {
         const sure = window.confirm("Do you want to delete order? ");
@@ -35,7 +40,8 @@ const MyOrder = () => {
         }
       };
 
-
+   //orders all details
+   
     return (
         <div data-aos="fade-left">
             <h3 className="fw-bold">My Order</h3>

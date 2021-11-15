@@ -13,6 +13,7 @@ import PrivateRoute from './Pages/Shared/PrivateRoute/PrivateRoute';
 import Login from './Pages/Login/Login';
 import Dashboard from './Pages/Dashboard/Dashboard';
 import Purches from './Pages/Purches/Purches';
+import MakeAdmin from './Pages/MakeAdmin/MakeAdmin';
 
 
 
@@ -36,7 +37,7 @@ function App() {
           </PrivateRoute>
           <Route path="/login">
            <Login></Login>
-          </Route>    
+          </Route>   
           <Route path="/dashbord">
             <Dashboard></Dashboard>
           </Route>

@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import { createUserWithEmailAndPassword, getAuth, GoogleAuthProvider, onAuthStateChanged, sendEmailVerification, sendPasswordResetEmail, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile  } from "firebase/auth";
 import initializeAuthentication from '../Pages/Shared/Firebase/firebase.init';
-import { useHistory, useLocation } from 'react-router';
 
 initializeAuthentication();
 const useFirebase = () => {

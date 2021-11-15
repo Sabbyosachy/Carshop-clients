@@ -8,6 +8,12 @@
 .mrg{
     margin-left: 70px;
 }
+.mrg1{
+    margin-left: 70px;
+    width: 50%;
+    background-color: rgb(216, 216, 216);
+    padding: 6px 15px;
+}
 .navsdash:hover{
     color:black;
 }

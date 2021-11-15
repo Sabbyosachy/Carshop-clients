@@ -7,6 +7,9 @@ const ManageProduct = () => {
     const[products,setProducts]=useState([]);
     const[orders,setOrders]=useState([]);
     const{isLoading}=useAuth();
+    
+    //Fetch products from database
+    
     useEffect(() => {
         fetch('http://localhost:5000/products')
             .then(response => response.json())
@@ -20,6 +23,8 @@ const ManageProduct = () => {
         return <h4 className="text-danger text-center py-5 pt-5 mt-5">Loading.........</h4>;
      
     }
+    //Delete products 
+
     const handleDelete = (id) => {
         const sure = window.confirm("Do you want to delete this product? ");
         if (sure) {
@@ -39,6 +44,8 @@ const ManageProduct = () => {
             });
         }
       };
+
+      // products all information 
     return (
         <div data-aos="fade-left">
             <h3 className="fw-bold">Manage Products</h3>
