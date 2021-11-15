@@ -1,13 +1,20 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Carousel } from 'react-bootstrap';
 import './CarosuleProduct.css';
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const CarosuleProduct = () => {
+  useEffect(()=>{
+    Aos.init({duration:3000});
+},[]);
     return (
         <div className="pt-5">
-            <h3 className="fw-bold">All Upcoming Cars</h3>
+           <div data-aos="fade-down">
+           <h3 className="fw-bold">All Upcoming Cars</h3>
             <span className="fw-bold text-danger mb-4">With Best Price</span>
-            <div className="py-5">
+           </div>
+            <div data-aos="fade-up" className="py-5">
             <Carousel fade>
             <Carousel.Item>
     <img

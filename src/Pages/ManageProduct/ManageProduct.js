@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import useAuth from '../../hooks/useAuth';
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const ManageProduct = () => {
     const[products,setProducts]=useState([]);
@@ -9,7 +11,10 @@ const ManageProduct = () => {
         fetch('http://localhost:5000/products')
             .then(response => response.json())
             .then(data => setProducts(data));
-    }, [])
+    }, []);
+    useEffect(()=>{
+      Aos.init({duration:2000});
+  },[]);
     
     if(isLoading){
         return <h4 className="text-danger text-center py-5 pt-5 mt-5">Loading.........</h4>;
@@ -35,7 +40,7 @@ const ManageProduct = () => {
         }
       };
     return (
-        <div>
+        <div data-aos="fade-left">
             <h3 className="fw-bold">Manage Products</h3>
             <span className="fw-bold text-danger mb-4">Products Are Handle</span>
             <div className="show__item">

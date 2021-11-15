@@ -1,26 +1,26 @@
 .navsdash{
     text-decoration: none;
     color: black;
-    font-weight: 600;
+    font-weight: 700;
     line-height: 45px;
-    text-decoration: none;
-    margin-right: 10px;
-    font-weight: 600;
-    font-size: 15px;
-    padding: 5px 12px;
-    border: 2px solid rgb(94, 94, 94) ;
-    transition: 0.8s;
+    
+}
+.mrg{
+    margin-left: 70px;
 }
 .navsdash:hover{
-    color:white;
-    background-color:rgb(94, 94, 94) ;
+    color:black;
 }
 .dash{
-    background-color: rgb(231, 231, 231);
+    background-color: rgb(238, 238, 238);
+    padding: 25px;
 }
 .backbg{
-    background-color: rgb(231, 231, 231);
+    background-color: rgb(238, 238, 238);
     padding-top: 60px;
     min-height:500px;
     height: 100%;
+}
+.bord{
+    text-align: left;
 }

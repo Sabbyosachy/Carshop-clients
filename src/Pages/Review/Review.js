@@ -1,6 +1,8 @@
 import axios from 'axios';
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useForm } from "react-hook-form";
+import Aos from "aos";
+import "aos/dist/aos.css";
 const Review = () => {
     const { register, handleSubmit,reset} = useForm();
     const onSubmit=data=>{
@@ -13,8 +15,12 @@ const Review = () => {
            }
        })
     }
+
+    useEffect(()=>{
+        Aos.init({duration:2000});
+    },[]);
     return (
-        <div className="addproduct">
+        <div data-aos="fade-left" className="addproduct">
         <h3 className=" fw-bold text-warning">Your Opinion</h3>
         <span className="fw-bold text-danger mb-5">Please Giveus Review</span>
       

@@ -1,7 +1,9 @@
 
 import axios from 'axios';
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useForm } from "react-hook-form";
+import Aos from "aos";
+import "aos/dist/aos.css";
 import './AddProduct.css';
 const AddProduct = () => {
     const { register, handleSubmit,reset} = useForm();
@@ -17,8 +19,12 @@ const AddProduct = () => {
       })
     }
 
+    useEffect(()=>{
+      Aos.init({duration:2000});
+  },[]);
+
     return (
-        <div className="addproduct">
+        <div data-aos="fade-left" className="addproduct">
             <h3 className=" fw-bold text-warning">Add New Product</h3>
             <span className="fw-bold text-danger mb-5">New Iteams Add</span>
   

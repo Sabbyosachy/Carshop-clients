@@ -13,13 +13,6 @@
 .texa{
     text-align: left;
 }
-.image{
-    transform: scale(1);
-    transition:0.7s;
-}
-.image:hover{
-    transform: scale(1.1);
-}
 .btn{
    color: black;
    border: 2px solid rgb(94, 94, 94);

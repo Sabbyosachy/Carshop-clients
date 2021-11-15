@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import useAuth from '../../../../hooks/useAuth';
+import Aos from "aos";
+import "aos/dist/aos.css";
 import './Explore.css';
 const Explore = () => {
     const[products,setProducts]=useState([]);
@@ -9,7 +11,10 @@ const Explore = () => {
         fetch('http://localhost:5000/products')
             .then(response => response.json())
             .then(data => setProducts(data));
-    }, [])
+    }, []);
+    useEffect(()=>{
+        Aos.init({duration:2000});
+    },[]);
     
     if(isLoading){
         return <h4 className="text-danger text-center py-5 pt-5 mt-5">Loading.........</h4>;
@@ -17,9 +22,11 @@ const Explore = () => {
     }
     return (
         <div className="py-5 mt-5">
+            <div data-aos="fade-down">
             <h3 className="fw-bold">Best All Cars</h3>
             <span className="fw-bold text-danger mb-4">Expensive Cars</span>
-            <div className="show__item">
+            </div>
+            <div data-aos="fade-up" className="show__item">
                 {
                     products.map(product=>
                         <div className="service" key={product._id}>

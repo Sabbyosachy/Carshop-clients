@@ -17,46 +17,47 @@ const Dashboard = () => {
     let { path, url } = useRouteMatch();
     const {user,logOut,admin}=useAuth();
     return (
-        <div className="">
+        <div className="me-auto">
             <div className="dash">
-            <h3 className="fw-bold pt-5">Dashboard</h3>
+            <h3 className="fw-bold">Dashboard</h3>
             <span className="fw-bold text-danger ">Use All Features</span>
             </div>
             
         
          <div>
              <div className="row">
-                 <div className="col-md-6 col-12">
+                 <div className="col-md-3 bord col-12">
                  <div className="backbg">
-                 <Link className="navsdash" to="/home">Home</Link>
+        
+                  <h6 className="mrg"><i class="fas fa-home"></i><Link className="navsdash" to="/home">Home</Link></h6>
                  {
                    admin &&  <div>
-                         <Link className="navsdash" to={`${url}/makeadmin`}>Make Admin</Link>
-                 <br />
-                 <Link className="navsdash" to={`${url}/addproduct`}>Add Product</Link>
-              <br />
-                 <Link className="navsdash" to={`${url}/mnallorder`}>Manage AllOrder</Link>
-              <br />
-                 <Link className="navsdash" to={`${url}/manageproduct`}>Manage Product</Link>
+                         <h6 className="mrg"><i class="fas fa-user-shield"></i> <Link className="navsdash" to={`${url}/makeadmin`}>Make Admin</Link></h6>
+            
+                <h6 className="mrg"><i class="fas fa-shopping-basket"></i> <Link className="navsdash" to={`${url}/addproduct`}>Add Product</Link></h6>
+       
+                 <h6 className="mrg"><i class="fas fa-shopping-cart"></i> <Link className="navsdash" to={`${url}/mnallorder`}>Manage AllOrder</Link></h6>
+        
+                 <h6 className="mrg"><i class="fas fa-car"></i> <Link className="navsdash" to={`${url}/manageproduct`}>Manage Product</Link></h6>
                      </div>
                  }
                  {
                      !admin && <div>
-                         <Link className="navsdash" to={`${url}/myorder`}>My Order</Link>
-              <br />
-                 <Link className="navsdash" to={`${url}/pay`}>Payment</Link>
-              <br />
-                 <Link className="navsdash" to={`${url}/review`}>Review</Link>
-                 <br />
+                         <h6 className="mrg"><i class="fas fa-shopping-basket"></i> <Link className="navsdash" to={`${url}/myorder`}>My Order</Link></h6>
+     
+                <h6 className="mrg"><i class="fas fa-dollar-sign"></i> <Link className="navsdash" to={`${url}/pay`}>Payment</Link></h6>
+
+                 <h6 className="mrg"><i class="fas fa-user"></i> <Link className="navsdash" to={`${url}/review`}>Review</Link></h6>
+               
                      </div>
                  }
                  {
                    user?.email ?
-                   <Link onClick={logOut} to="/home" className="navsdash">Logout</Link>:''  
+                   <h6 className="mrg"><i class="fas fa-sign-out-alt"></i> <Link onClick={logOut} to="/home" className="navsdash">Logout</Link></h6> :''  
                  }
                  </div>
                  </div>
-                 <div className="col-md-6 col-12 pt-5">
+                 <div className="col-md-9 col-12 pt-5">
                  <Switch>
         <Route path="/home">
           <Home></Home>

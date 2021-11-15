@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import useAuth from '../../hooks/useAuth';
+import Aos from "aos";
+import "aos/dist/aos.css";
 const MyOrder = () => {
     const[order,setOrder]=useState([]);
     const[orders,setOrders]=useState([]);
@@ -8,7 +10,10 @@ const MyOrder = () => {
         fetch('http://localhost:5000/orders')
         .then(res=>res.json())
         .then(data=>setOrder(data));
-    },[])
+    },[]);
+    useEffect(()=>{
+      Aos.init({duration:2000});
+  },[]);
 
     const handleDelete = (id) => {
         const sure = window.confirm("Do you want to delete order? ");
@@ -32,7 +37,7 @@ const MyOrder = () => {
 
 
     return (
-        <div>
+        <div data-aos="fade-left">
             <h3 className="fw-bold">My Order</h3>
             <span className="fw-bold text-danger mb-4">Selected Product You Want To Buy</span>
             <div>

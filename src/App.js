@@ -9,10 +9,10 @@ import Home from './Pages/Home/Home/Home';
 import NotFound from './Pages/NotFound/NotFound';
 import Explores from './Pages/Explores/Explores/Explores';
 import AuthProvider from './contexts/AuthProvider';
-import Product from './Pages/Home/Product/Product';
 import PrivateRoute from './Pages/Shared/PrivateRoute/PrivateRoute';
 import Login from './Pages/Login/Login';
 import Dashboard from './Pages/Dashboard/Dashboard';
+import Purches from './Pages/Purches/Purches';
 
 
 
@@ -32,7 +32,7 @@ function App() {
             <Explores></Explores>
           </Route>
           <PrivateRoute exact path="/products/:productId">
-            <Product></Product>
+            <Purches></Purches>
           </PrivateRoute>
           <Route path="/login">
            <Login></Login>

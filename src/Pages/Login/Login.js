@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './Login.css';
+import Aos from "aos";
+import "aos/dist/aos.css";
 import { useHistory, useLocation } from 'react-router';
 import useAuth from '../../hooks/useAuth';
 
@@ -19,15 +21,18 @@ const Login = () => {
           })
           .finally(()=>setIsLoading(false));
     }
+    useEffect(()=>{
+        Aos.init({duration:2000});
+    },[]);
     return (
         <div className="row container">
-            <div className="col-md-8">
+            <div data-aos="fade-right" className="col-md-8">
                 <div className="py-5">
                 <img className="w-100" src="https://i.ibb.co/yWJvNXp/EIChxr-WX4-AEzq-Ai.jpg" alt="" srcset="" />
                 </div>
               
             </div>
-            <div className="col-md-4">
+            <div data-aos="fade-left" className="col-md-4">
             <div className="login py-5 my-5">
         <form onSubmit={handleSubmit}>
             <h2 className="font-bold text-center text-red-400">Please {isLogin ? "Login" : "Register"}</h2>

@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './ManageAllOrders.css';
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const ManageAllOrder = () => {
     const[order,setOrder]=useState([]);
@@ -30,8 +32,12 @@ const ManageAllOrder = () => {
         }
       };
 
+      useEffect(()=>{
+        Aos.init({duration:2000});
+    },[]);
+
     return (
-        <div>
+        <div data-aos="fade-left">
             <h3 className="fw-bold">Manage All Order</h3>
             <span className="fw-bold text-danger mb-4">See All Orders</span>
             <div>
