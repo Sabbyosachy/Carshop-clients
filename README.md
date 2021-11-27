@@ -6,6 +6,12 @@ Hello,Everyone welcome to Zee Car site here are different type cars are availabl
 
 •	This project Use To Make React, React Router, React Bootstrap,MongoDB,Node Express,Node Mongodb.
 
+•	Car shopping website here is admin and user panel admin can add any new service and see all the orders admin can delete any order.
+
+•	Users can review and review the show on the home page users can’t buy anything if users are not logged in. For order, the user gives some information.
+
+•	Admin can make another admin via user email.
+
 •	Here use caurosel login/create account and logout option.
 
 •	If a user is logged in, see another option Dashboard and inside that dashboard a normal user will see pay,My Orders, Review, Logout.
